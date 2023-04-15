@@ -1,11 +1,42 @@
+# Configurações de ambiente e de build
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+bin/
+logs/
+*.log
+*.log.*
+*.pid
+*.pid.*
+*.logback.*
+*.jar
+*.war
+*.ear
+*.class
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+build/
+out/
+
+# Configurações de dependências
+.classpath
+.project
+.settings/
+
+# Configurações específicas do Spring Boot
+env.properties
+src/main/resources/env.properties
+
+# Configurações do Eclipse
+*.launch
+*.classpath
+*.project
+.settings/
+
+# Arquivos de configuração local
+src/main/resources/application-local.properties
+src/main/resources/application-local.yml
+
+# Arquivos não interessantes
+HELP.md
