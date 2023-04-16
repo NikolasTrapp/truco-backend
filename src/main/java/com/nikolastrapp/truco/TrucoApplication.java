@@ -15,21 +15,6 @@ import java.util.Date;
 @SpringBootApplication
 public class TrucoApplication {
 
-    private final ChatRepository chatRepository;
-    private final ComentarioRepository comentarioRepository;
-    private final EquipeRepository equipeRepository;
-    private final JogadorRepository jogadorRepository;
-    private final PartidaRepository partidaRepository;
-    private final SalaRepository salaRepository;
-
-    public TrucoApplication(ChatRepository chatRepository, ComentarioRepository comentarioRepository, EquipeRepository equipeRepository, JogadorRepository jogadorRepository, PartidaRepository partidaRepository, SalaRepository salaRepository) {
-        this.chatRepository = chatRepository;
-        this.comentarioRepository = comentarioRepository;
-        this.equipeRepository = equipeRepository;
-        this.jogadorRepository = jogadorRepository;
-        this.partidaRepository = partidaRepository;
-        this.salaRepository = salaRepository;
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(TrucoApplication.class, args);
