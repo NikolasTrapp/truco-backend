@@ -9,15 +9,13 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import static java.text.DateFormat.Field.TIME_ZONE;
-
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name="TB_COMENTARIO")
+@Table(name = "TB_COMENTARIO")
 public class Comentario implements Serializable {
 
-    public Comentario (Jogador jogador, Chat chat, LocalDateTime data_envio){
+    public Comentario(Jogador jogador, Chat chat, LocalDateTime data_envio) {
         this.jogador = jogador;
         this.chat = chat;
         this.data_envio = data_envio;
@@ -33,7 +31,7 @@ public class Comentario implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "chat_id", nullable = false)
-    private  Chat chat;
+    private Chat chat;
 
     @Column(nullable = false)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")

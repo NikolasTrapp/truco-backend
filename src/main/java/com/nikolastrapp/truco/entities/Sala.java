@@ -10,7 +10,7 @@ import java.util.UUID;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name="TB_SALAS")
+@Table(name = "TB_SALAS")
 public class Sala implements Serializable {
 
     @Id

@@ -17,29 +17,29 @@ public class ChatService {
     }
 
 
-    public List<Chat> findAll(){
+    public List<Chat> findAll() {
         return this.chatRepository.findAll();
     }
 
-    public Chat findById(final UUID id){
+    public Chat findById(final UUID id) {
         return this.chatRepository.findById(id).orElseThrow();
     }
 
-    public Chat save(final Chat chat){
+    public Chat save(final Chat chat) {
         return this.chatRepository.save(chat);
     }
 
-    public void delete(final UUID id){
+    public void delete(final UUID id) {
         this.chatRepository.delete(this.findById(id));
     }
 
-    public Chat update(final Chat chatNovo){
+    public Chat update(final Chat chatNovo) {
         Chat chatAntigo = this.findById(chatNovo.getId());
         this.update(chatNovo, chatAntigo);
         return this.chatRepository.save(chatAntigo);
     }
 
-    public void update(final Chat chatNovo, final Chat chatAntigo){
+    public void update(final Chat chatNovo, final Chat chatAntigo) {
 
     }
 }

@@ -17,29 +17,29 @@ public class SalaService {
     }
 
 
-    public List<Sala> findAll(){
+    public List<Sala> findAll() {
         return this.salaRepository.findAll();
     }
 
-    public Sala findById(final UUID id){
+    public Sala findById(final UUID id) {
         return this.salaRepository.findById(id).orElseThrow();
     }
 
-    public Sala save(final Sala sala){
+    public Sala save(final Sala sala) {
         return this.salaRepository.save(sala);
     }
 
-    public void delete(final UUID id){
+    public void delete(final UUID id) {
         this.salaRepository.delete(this.findById(id));
     }
 
-    public Sala update(final Sala salaNovo){
+    public Sala update(final Sala salaNovo) {
         Sala salaAntigo = this.findById(salaNovo.getId());
         this.update(salaNovo, salaAntigo);
         return this.salaRepository.save(salaAntigo);
     }
 
-    public void update(final Sala salaNovo, final Sala salaAntigo){
+    public void update(final Sala salaNovo, final Sala salaAntigo) {
 
     }
 }

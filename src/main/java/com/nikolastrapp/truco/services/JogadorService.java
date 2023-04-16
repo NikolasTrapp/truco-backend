@@ -17,30 +17,30 @@ public class JogadorService {
     }
 
 
-    public List<Jogador> findAll(){
+    public List<Jogador> findAll() {
         return this.jogadorRepository.findAll();
     }
 
-    public Jogador findById(final UUID id){
+    public Jogador findById(final UUID id) {
         return this.jogadorRepository.findById(id).orElseThrow();
     }
 
-    public Jogador save(final Jogador jogador){
+    public Jogador save(final Jogador jogador) {
         return this.jogadorRepository.save(jogador);
     }
 
-    public void delete(final UUID id){
+    public void delete(final UUID id) {
         this.jogadorRepository.delete(this.findById(id));
     }
 
-    public Jogador update(final Jogador jogadorNovo){
+    public Jogador update(final Jogador jogadorNovo) {
         Jogador jogadorAntigo = this.findById(jogadorNovo.getId());
         this.update(jogadorNovo, jogadorAntigo);
         return this.jogadorRepository.save(jogadorAntigo);
     }
 
-    public void update(final Jogador jogadorNovo, final Jogador jogadorAntigo){
-        if (jogadorNovo.getNome() != null && jogadorNovo.getNome().isBlank()){
+    public void update(final Jogador jogadorNovo, final Jogador jogadorAntigo) {
+        if (jogadorNovo.getNome() != null && jogadorNovo.getNome().isBlank()) {
             jogadorAntigo.setNome(jogadorNovo.getNome());
         }
     }

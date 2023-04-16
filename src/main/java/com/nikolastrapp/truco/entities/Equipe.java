@@ -2,7 +2,6 @@ package com.nikolastrapp.truco.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,10 +13,10 @@ import java.util.UUID;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name="TB_EQUIPES")
+@Table(name = "TB_EQUIPES")
 public class Equipe implements Serializable {
 
-    public Equipe (Integer pontos, Partida partida){
+    public Equipe(Integer pontos, Partida partida) {
         this.pontos = pontos;
         this.partida = partida;
     }

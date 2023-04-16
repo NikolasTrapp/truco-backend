@@ -17,29 +17,29 @@ public class EquipeService {
     }
 
 
-    public List<Equipe> findAll(){
+    public List<Equipe> findAll() {
         return this.equipeRepository.findAll();
     }
 
-    public Equipe findById(final UUID id){
+    public Equipe findById(final UUID id) {
         return this.equipeRepository.findById(id).orElseThrow();
     }
 
-    public Equipe save(final Equipe equipe){
+    public Equipe save(final Equipe equipe) {
         return this.equipeRepository.save(equipe);
     }
 
-    public void delete(final UUID id){
+    public void delete(final UUID id) {
         this.equipeRepository.delete(this.findById(id));
     }
 
-    public Equipe update(final Equipe equipeNovo){
+    public Equipe update(final Equipe equipeNovo) {
         Equipe equipeAntigo = this.findById(equipeNovo.getId());
         this.update(equipeNovo, equipeAntigo);
         return this.equipeRepository.save(equipeAntigo);
     }
 
-    public void update(final Equipe equipeNovo, final Equipe equipeAntigo){
+    public void update(final Equipe equipeNovo, final Equipe equipeAntigo) {
 
     }
 }
