@@ -29,8 +29,8 @@ public class ChatService {
         return this.chatRepository.save(chat);
     }
 
-    public void delete(final Chat chat){
-        this.chatRepository.delete(this.findById(chat.getId()));
+    public void delete(final UUID id){
+        this.chatRepository.delete(this.findById(id));
     }
 
     public Chat update(final Chat chatNovo){

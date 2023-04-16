@@ -29,8 +29,8 @@ public class SalaService {
         return this.salaRepository.save(sala);
     }
 
-    public void delete(final Sala sala){
-        this.salaRepository.delete(this.findById(sala.getId()));
+    public void delete(final UUID id){
+        this.salaRepository.delete(this.findById(id));
     }
 
     public Sala update(final Sala salaNovo){

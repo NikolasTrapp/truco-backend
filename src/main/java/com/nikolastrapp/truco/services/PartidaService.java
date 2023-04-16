@@ -29,8 +29,8 @@ public class PartidaService {
         return this.partidaRepository.save(partida);
     }
 
-    public void delete(final Partida partida){
-        this.partidaRepository.delete(this.findById(partida.getId()));
+    public void delete(final UUID id){
+        this.partidaRepository.delete(this.findById(id));
     }
 
     public Partida update(final Partida partidaNovo){

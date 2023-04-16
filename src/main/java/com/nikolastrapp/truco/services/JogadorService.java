@@ -29,8 +29,8 @@ public class JogadorService {
         return this.jogadorRepository.save(jogador);
     }
 
-    public void delete(final Jogador jogador){
-        this.jogadorRepository.delete(this.findById(jogador.getId()));
+    public void delete(final UUID id){
+        this.jogadorRepository.delete(this.findById(id));
     }
 
     public Jogador update(final Jogador jogadorNovo){

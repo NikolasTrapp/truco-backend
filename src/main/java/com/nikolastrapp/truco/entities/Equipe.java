@@ -14,30 +14,26 @@ import java.util.UUID;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name="TB_JOGADORES")
-public class Jogador implements Serializable {
+@Table(name="TB_EQUIPES")
+public class Equipe implements Serializable {
+
+    public Equipe (Integer pontos, Partida partida){
+        this.pontos = pontos;
+        this.partida = partida;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     @Column
-    private String nome;
+    private Integer pontos;
 
-    @Column(unique = true)
-    private String email;
-
-    @Column
-    private String senha;
-
-    @Column
-    private Integer num_vitorias;
+    @OneToMany(mappedBy = "equipe")
+    @JsonIgnore
+    private List<Jogador> jogadores = new ArrayList<>();
 
     @ManyToOne
-    @JoinColumn(name = "equipe_id", nullable = false)
-    private Equipe equipe;
-
-    @OneToMany(mappedBy = "jogador")
-    @JsonIgnore
-    private List<Comentario> comentarios = new ArrayList<>();
+    @JoinColumn(name = "partida_id", nullable = false)
+    private Partida partida;
 }

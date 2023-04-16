@@ -29,8 +29,8 @@ public class ComentarioService {
         return this.comentarioRepository.save(comentario);
     }
 
-    public void delete(final Comentario comentario){
-        this.comentarioRepository.delete(this.findById(comentario.getId()));
+    public void delete(final UUID id){
+        this.comentarioRepository.delete(this.findById(id));
     }
 
     public Comentario update(final Comentario comentarioNovo){
