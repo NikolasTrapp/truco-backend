@@ -1,6 +1,7 @@
 # truco
 
- projeto criado com a finalidade de estudar web sockets e utilizar docker para conhecimento pessoal.
+ projeto criado com a finalidade de estudar web sockets, OAuth2 e Docker.
+
  
 Tecnologias utilizadas:
 
