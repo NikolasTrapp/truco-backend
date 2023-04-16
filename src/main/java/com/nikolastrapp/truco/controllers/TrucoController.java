@@ -9,13 +9,4 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TrucoController {
 
-        @Autowired
-        private SimpMessagingTemplate messagingTemplate;
-
-        @RequestMapping("/send-message")
-        public void sendMessage() {
-            messagingTemplate.convertAndSend("/my-websocket", "Hello, world!");
-        }
-
-
 }
